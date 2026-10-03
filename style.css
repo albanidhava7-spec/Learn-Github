@@ -1,15 +1,52 @@
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+/* BACKGROUND GLOW */
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: white;
+    position: relative;
+    overflow-x: hidden;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    top: 100px;
+    left: -150px;
+
+    background: #238636;
+
+    border-radius: 50%;
+
+    filter: blur(140px);
+
+    opacity: 0.25;
+
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    right: -150px;
+    bottom: 100px;
+
+    background: #58a6ff;
+
+    border-radius: 50%;
+
+    filter: blur(140px);
+
+    opacity: 0.2;
+
+    z-index: -1;
+}
 
 /* NAVBAR */
 
@@ -65,7 +102,7 @@ nav {
 
     padding: 80px 25px;
 
-    animation: fadeUp 1s ease;
+    animation: fadeUp 1.2s ease;
 }
 
 .small-title {
@@ -115,8 +152,12 @@ nav {
 }
 
 .button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px) scale(1.03);
+
     background: #2ea043;
+
+    box-shadow:
+        0 10px 30px rgba(46, 160, 67, 0.35);
 }
 
 
@@ -166,9 +207,11 @@ nav {
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.02);
 
     border-color: #58a6ff;
+
+    box-shadow: 0 15px 40px rgba(88, 166, 255, 0.15);
 }
 
 .icon {
