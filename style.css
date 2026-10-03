@@ -352,6 +352,11 @@ body.light-mode .project-card {
     border-color: #d0d7de;
 }
 
+body.light-mode .project-card span {
+    background: #eaeef2;
+    color: #24292f;
+}
+
 body.light-mode footer {
     border-color: #d0d7de;
     color: #57606a;
